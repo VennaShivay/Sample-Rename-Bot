@@ -13,9 +13,9 @@ async def rename_file(bot, msg):
        await msg.reply_text("ᴘʟᴇᴀꜱᴇ ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ꜰɪʟᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴏʀ ᴀᴜᴅɪᴏ ᴡɪᴛʜ ꜰɪʟᴇɴᴀᴍᴇ + .ᴇxᴛᴇɴꜱɪᴏɴ ᴇɢ:-(`.ᴍᴋᴠ` ᴏʀ `.ᴍᴘ4` ᴏʀ `.ᴢɪᴘ`)")
     og_media = getattr(reply, reply.media.value)
     new_name = msg.text.split(" ", 1)[1]
-    sts = await msg.reply_text("..𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜..🚀")
+    sts = await msg.reply_text("𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜....")
     c_time = time.time()
-    downloaded = await reply.download(file_name=new_name, progress=progress_message, progress_args=("..𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜.🪂.", sts, c_time)) 
+    downloaded = await reply.download(file_name=new_name, progress=progress_message, progress_args=(".𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜🚀🚀🚀", sts, c_time)) 
     filesize = humanbytes(og_media.file_size)                
     if CAPTION:
         try:
@@ -38,10 +38,10 @@ async def rename_file(bot, msg):
             print(e)        
             og_thumbnail = None
         
-    await sts.edit("..𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜..")
+    await sts.edit("𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜....")
     c_time = time.time()
     try:
-        await bot.send_document(msg.chat.id, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("..𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜..🚀🚀", sts, c_time))        
+        await bot.send_document(msg.chat.id, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜🪂🪂🪂", sts, c_time))        
     except Exception as e:  
         return await sts.edit(f"Error {e}")                       
     try:
