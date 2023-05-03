@@ -9,9 +9,8 @@ async def start_cmd(bot, msg):
     btn = InlineKeyboardMarkup([[
         InlineKeyboardButton("🤖 SOURCE CODE", url="https://github.com/MrMKN/Simple-Rename-Bot")
         ],[
-        InlineKeyboardButton("🖥️ How To Deploy", url="https://youtu.be/oc847WvOUaI")
+        InlineKeyboardButton("🚫 Close", callback_data="del")
     ]])
-    if msg.from_user.id != ADMIN:
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     await start(bot, msg, cb=False)
 
