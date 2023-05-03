@@ -13,7 +13,7 @@ async def start_cmd(bot, msg):
 
 @Client.on_callback_query(filters.regex("start"))
 async def start(bot, msg, cb=True):   
-    txt=f"hai {msg.from_user.mention} ɪ ᴀᴍ ꜱɪᴍᴘʟᴇ ʀᴇɴᴀᴍᴇ ʙᴏᴛ ᴡɪᴛʜ ᴘᴇʀꜱᴏɴᴀʟ ᴜꜱᴀɢᴇ. \nʀᴇᴘʟʏ ᴍᴇꜱꜱᴇɢᴇ ᴡɪᴛʜ /ʀᴇɴᴀᴍᴇ ꜰɪʟᴇɴᴀᴍᴇ+.ᴇxᴛᴇɴᴛɪᴏɴ \n👇👇👇"
+    txt=f"ʜᴀɪ..{msg.from_user.mention} ɪ ᴀᴍ ꜱɪᴍᴘʟᴇ ʀᴇɴᴀᴍᴇ ʙᴏᴛ ᴡɪᴛʜ ᴘᴇʀꜱᴏɴᴀʟ ᴜꜱᴀɢᴇ. \nʀᴇᴘʟʏ ᴍᴇꜱꜱᴇɢᴇ ᴡɪᴛʜ /ʀᴇɴᴀᴍᴇ ꜰɪʟᴇɴᴀᴍᴇ+.ᴇxᴛᴇɴᴛɪᴏɴ \n👇👇👇"
     if cb:
         await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
     else:
