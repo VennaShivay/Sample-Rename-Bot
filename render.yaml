@@ -1,11 +1,11 @@
 services:
   - type: web
     plan: free
-    name: SIMPLE-RENAME-BOT
+    name: Simple-Rename-Bot
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
-    repo: https://github.com/VennaShivay/Simple-Rename-Bot.git      
+    repo: https://github.com/MrMKN/Simple-Rename-Bot.git      
     branch: main
     envVars:
       - key: BOT_TOKEN 
