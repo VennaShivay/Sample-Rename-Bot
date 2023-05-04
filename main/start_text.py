@@ -6,7 +6,7 @@ from config import ADMIN
 @Client.on_message(filters.command("start") & filters.private)                             
 async def start_cmd(bot, msg):
     txt="ᴛʜɪꜱ ɪꜱ ᴘᴇʀꜱᴏɴᴀʟ ᴜꜱᴇ ʙᴏᴛ 🙏"
-    if msg.from_user.id != ADMIN:
+
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     await start(bot, msg, cb=False)
 
