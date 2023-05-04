@@ -16,7 +16,7 @@ services:
       - key: API_HASH
         sync: false
       - key: DOWNLOAD_LOCATION
-        sync: ./DOWNLOADS
+        sync: false
       - key: ADMIN
         sync: false
       - key: CAPTION
