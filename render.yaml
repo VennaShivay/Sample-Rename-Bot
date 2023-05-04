@@ -1,31 +1,24 @@
 services:
   - type: web
     plan: free
-    name: Simple-Rename-Bot
+    name: PYRO-RENAME-BOT
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
-    repo: https://github.com/MrMKN/Simple-Rename-Bot.git      
+    repo: https://github.com/MrMKN/Simple-Rename-Bot.git
     branch: main
+    autoDeploy: false
     envVars:
-      - key: BOT_TOKEN 
+      - key: BOT_TOKEN
         sync: false
-      - key: API_ID 
+      - key: API_ID
         sync: false
       - key: API_HASH
         sync: false
-      - key: WEBHOOK
-        synv: false 
-      - key: FORCE_SUB 
+      - key: DOWNLOAD_LOCATION
+        sync: ./DOWNLOADS
+      - key: ADMIN
         sync: false
-      - key: LOG_CHANNEL 
+      - key: CAPTION
         sync: false
-      - key: DB_NAME 
-        sync: false
-      - key: DB_URL 
-        sync: false 
-      - key: START_PIC 
-        sync: false
-      - key: ADMIN 
-        sync: false    
-    autoDeploy: false
+        
