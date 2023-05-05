@@ -8,11 +8,11 @@ dir = os.listdir(DOWNLOAD_LOCATION)
 async def set_tumb(bot, msg):       
     if len(dir) == 0:
         await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/thumbnail.jpg")
-        return await msg.reply(f"Your permanent thumbnail is saved in dictionary ✅️ \nɪꜰ ʏᴏᴜ ᴄʜᴀɴɢᴇ ʏᴜʀ ꜱᴇʀᴠᴇʀ ᴏʀ ʀᴇᴄʀᴇᴀᴛᴇ ᴛʜᴇ ꜱᴇʀᴠᴇʀ ᴀᴘᴘ ᴛᴏ ᴀɢᴀɪɴ ʀᴇꜱᴇᴛ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ⚠️")            
+        return await msg.reply(f"ʏᴏᴜʀ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛʜᴜᴍʙɴᴀɪʟ ɪꜱ ꜱᴀᴠᴇᴅ ɪɴ ᴅɪᴄᴛɪᴏɴᴀʀʏ✅️ \nɪꜰ ʏᴏᴜ ᴄʜᴀɴɢᴇ ʏᴜʀ ꜱᴇʀᴠᴇʀ ᴏʀ ʀᴇᴄʀᴇᴀᴛᴇ ᴛʜᴇ ꜱᴇʀᴠᴇʀ ᴀᴘᴘ ᴛᴏ ᴀɢᴀɪɴ ʀᴇꜱᴇᴛ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ⚠️")            
     else:    
         os.remove(f"{DOWNLOAD_LOCATION}/thumbnail.jpg")
         await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/thumbnail.jpg")               
-        return await msg.reply(f"Your permanent thumbnail is saved in dictionary ✅️ \nɪꜰ ʏᴏᴜ ᴄʜᴀɴɢᴇ ʏᴜʀ ꜱᴇʀᴠᴇʀ ᴏʀ ʀᴇᴄʀᴇᴀᴛᴇ ᴛʜᴇ ꜱᴇʀᴠᴇʀ ᴀᴘᴘ ᴛᴏ ᴀɢᴀɪɴ ʀᴇꜱᴇᴛ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ⚠️")            
+        return await msg.reply(f"ʏᴏᴜʀ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛʜᴜᴍʙɴᴀɪʟ ɪꜱ ꜱᴀᴠᴇᴅ ɪɴ ᴅɪᴄᴛɪᴏɴᴀʀʏ✅️ \nɪꜰ ʏᴏᴜ ᴄʜᴀɴɢᴇ ʏᴜʀ ꜱᴇʀᴠᴇʀ ᴏʀ ʀᴇᴄʀᴇᴀᴛᴇ ᴛʜᴇ ꜱᴇʀᴠᴇʀ ᴀᴘᴘ ᴛᴏ ᴀɢᴀɪɴ ʀᴇꜱᴇᴛ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ⚠️")            
 
 
 @Client.on_message(filters.private & filters.command("view") & filters.user(ADMIN))                            
