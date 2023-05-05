@@ -1,9 +1,9 @@
 import time, os
 from pyrogram import Client, filters, enums
-from config import DOWNLOAD_LOCATION, CAPTION, ADMIN
+from config import DOWNLOAD_LOCATION, CAPTION, ADMIN, SUDO_USERS
 from main.utils import progress_message, humanbytes
 
-@Client.on_message(filters.private & filters.command("rename") & filters.user(ADMIN))             
+@Client.on_message(filters.private & filters.command("rename") & filters.user(SUDO_USERS))             
 async def rename_file(bot, msg):
     reply = msg.reply_to_message
     if len(msg.command) < 2 or not reply:
@@ -23,7 +23,7 @@ async def rename_file(bot, msg):
         except Exception as e:            
             return await sts.edit(text=f"ʏᴏᴜʀ ᴄᴀᴘᴛɪᴏɴ ᴇʀʀᴏʀ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ ᴋᴇʏᴡᴏʀᴅ ●> ({e})")           
     else:
-        cap = f"{new_name}\n\n💽 size : {filesize}"
+        cap = f"{new_name}\n\n💽 size : {filesize} @PilotsGalaxy"
 
     # this idea's back end is MrMKN brain 🧠
 
