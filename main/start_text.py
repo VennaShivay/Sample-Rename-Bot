@@ -26,11 +26,9 @@ async def start(bot, msg, cb=True):
         InlineKeyboardButton("📡 About", callback_data="about") 
     ]]  
     if cb:
-        await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
-    else:
-        await msg.reply_text(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
-
-
+        return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
+    await start(bot, msg, cb=False)
+    
 @Client.on_callback_query(filters.regex("help"))
 async def help(bot, msg):
     txt = "just send a file and /rename <new name> with replayed your file\n\n"
