@@ -1,6 +1,6 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
-from config import ADMIN
+from config import SUDO_USERS
  
 
 @Client.on_message(filters.command("start") & filters.private)                             
@@ -11,7 +11,7 @@ async def start_cmd(bot, msg):
         ],[
         InlineKeyboardButton("🖥️ How To Deploy", url="https://youtu.be/oc847WvOUaI")
     ]])
-    if msg.from_user.id != ADMIN:
+    if msg.from_user.id != SUDO_USERS:
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     await start(bot, msg, cb=False)
 
